@@ -57,3 +57,4 @@ Bags will be created according to their type (LIFO, FIFO, Random).
 In order to share the surprises the AbstractGiveSurprises class is defined.
 The AbstractGiveSurprises class is extended by three classes: GiveSurpriseAndApplause, GiveSurpriseAndSing and GiveSurpriseAndHug, whose behaviour is consistent with their names.
 
+## Example of running the application
