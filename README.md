@@ -58,3 +58,6 @@ In order to share the surprises the AbstractGiveSurprises class is defined.
 The AbstractGiveSurprises class is extended by three classes: GiveSurpriseAndApplause, GiveSurpriseAndSing and GiveSurpriseAndHug, whose behaviour is consistent with their names.
 
 ## Example of running the application
+![pic1](Screenshots/pic1.jpg)
+![pic2](Screenshots/pic2.jpg)
+![pic3](Screenshots/pic3.jpg)
