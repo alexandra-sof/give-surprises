@@ -49,13 +49,13 @@ GatherSurprises does not allow creating new instances, nor inheritance, its impl
 The class only implements two static methods, to generate either a random array of surprises or just one random surprise.
 
 ### Creating the containers
-The containers are created using the factory design pattern. The common interface used for making the containers is IBagFactory. 
-The existence of an interface allows for several bag factories to be created depending, for example, on the type of collection being used. In the project we are using only ArrayList to store the surprises, therefore is need for only one BagFactory.
+The containers are created using the factory design pattern. The common interface used for making the containers is IBagFactory.  
+The existence of an interface allows for several bag factories to be created depending, for example, on the type of collection being used. In the project we are using only ArrayList to store the surprises, therefore is need for only one BagFactory.  
 Bags will be created according to their type (LIFO, FIFO, Random).
 
 ### Sharing the surprises
 In order to share the surprises the AbstractGiveSurprises class is defined.
-The AbstractGiveSurprises class is extended by three classes: GiveSurpriseAndApplause, GiveSurpriseAndSing and GiveSurpriseAndHug, whose behaviour is consistent with their names.
+The AbstractGiveSurprises class is extended by three classes: GiveSurpriseAndApplause, GiveSurpriseAndSing and GiveSurpriseAndHug, whose behaviours are consistent with their names.
 
 ## Example of running the application
 ![pic1](Screenshots/pic1.jpg)
