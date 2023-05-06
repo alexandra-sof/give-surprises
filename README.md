@@ -14,11 +14,10 @@ The program is based on the following OOP principles and notions:
 - code structuring based on applicability, methods and classes
 - using uppcasting in order to work with different types of objects  
 - the design and using of interfaces in working with different components
-- genericity
 
 ## Architecture
 ### Surprises
-There are 3 types of surprises, each type implementing the common interface ISurprise, which allows to "open" the surprise:
+There are three types of surprises, each type implementing the common interface ISurprise, which allows to "open" the surprise:
 - Fortune cookie message
 - Candies
 - Minion toy
@@ -33,7 +32,7 @@ The surprises are generated in a random manner, using the static method generate
 
 
 ### Storing surprises
-The surprises are stored in 3 different types of containers. 
+The surprises are stored in three different types of containers. 
 - LIFO bag
 - FIFO bag
 - Random bag  
@@ -50,5 +49,11 @@ GatherSurprises does not allow creating new instances, nor inheritance, its impl
 The class only implements two static methods, to generate either a random array of surprises or just one random surprise.
 
 ### Creating the containers
+The containers are created using the factory design pattern. The common interface used for making the containers is IBagFactory. 
+The existence of an interface allows for several bag factories to be created depending, for example, on the type of collection being used. In the project we are using only ArrayList to store the surprises, therefore is need for only one BagFactory.
+Bags will be created according to their type (LIFO, FIFO, Random).
 
+### Sharing the surprises
+In order to share the surprises the AbstractGiveSurprises class is defined.
+The AbstractGiveSurprises class is extended by three classes: GiveSurpriseAndApplause, GiveSurpriseAndSing and GiveSurpriseAndHug, whose behaviour is consistent with their names.
 
