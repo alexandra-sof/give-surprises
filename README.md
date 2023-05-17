@@ -62,6 +62,6 @@ In order to share the surprises the AbstractGiveSurprises class is defined, whic
 In order to instantiate a type of GiveSurprise with passion (applause, hug, sing) the static method  AbstractGiveSurprises generateGiveWithPassion(GiveWithPassionTypes type, BagTypes bagType, int waitTime) function is called.
 
 ## Example of running the application
-![picture1](Screenshots/pic1.jpg)
-![picture2](Screenshots/pic2.jpg)
-![picture3](Screenshots/pic3.jpg)
+![picture1](Screenshots/picture1.jpg)
+![picture2](Screenshots/picture2.jpg)
+![picture3](Screenshots/picture3.jpg)
