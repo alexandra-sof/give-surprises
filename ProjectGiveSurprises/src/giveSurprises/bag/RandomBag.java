@@ -1,19 +1,22 @@
 package giveSurprises.bag;
 
-import java.util.Random;
-
+import giveSurprises.random.RandomGenerator;
 import giveSurprises.surprises.ISurprise;
 
 public class RandomBag extends AbstractBag {
-	private static final Random rand=new Random();
-	
+
 	@Override
 	public ISurprise takeOut() {
-		if(!this.surprisesBag.isEmpty()) {
-			int idx=rand.nextInt(this.surprisesBag.size());
+		if (!this.surprisesBag.isEmpty()) {
+			int idx = RandomGenerator.generateRandomInt(this.surprisesBag.size());
 			return this.surprisesBag.remove(idx);
 		}
 		return null;
 	}
-	
+
+	@Override()
+	public BagTypes getBagType() {
+		return BagTypes.RANDOM;
+	}
+
 }

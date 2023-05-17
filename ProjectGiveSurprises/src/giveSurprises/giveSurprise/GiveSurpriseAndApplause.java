@@ -2,14 +2,15 @@ package giveSurprises.giveSurprise;
 
 import giveSurprises.bag.BagTypes;
 
-public class GiveSurpriseAndApplause extends AbstractGiveSurprises{
-	
-	public GiveSurpriseAndApplause(BagTypes bag, int waitTime) {
-		super(bag, waitTime);
+public class GiveSurpriseAndApplause extends AbstractGiveSurprises {
+
+	protected GiveSurpriseAndApplause(BagTypes bagType, int waitTime) {
+		super(bagType, waitTime);
 	}
 
 	@Override
-	void giveWithPassion() {
+	public void giveWithPassion() {
 		System.out.println("Loud applause to you… For it is in giving that we receive.");
 	}
+
 }

@@ -1,38 +1,41 @@
 package giveSurprises.surprises;
 
-import java.util.Random;
+import giveSurprises.random.RandomGenerator;
 
-public class Candies implements ISurprise{
+public class Candies extends AbstractSurprise {
 	private int candyNb;
 	private String candyType;
-	private static String[] typesOfCandies={"chocolate", "jelly", "fruits", "vanilla"};
-	private final static Random rand=new Random();	
-	private final static int maximumNbOfCandies=50;
-	
+	private static final String[] typesOfCandies = { "chocolate", "jelly", "fruits", "vanilla" };
+	private static final int maximumNbOfCandies = 50;
+
 	public static Candies generate() {
-		int randomNbCandyNb=rand.nextInt(maximumNbOfCandies)+1;
-		int randomNbCandyType=rand.nextInt(typesOfCandies.length);
-		Candies candySurprise=new Candies(randomNbCandyNb, typesOfCandies[randomNbCandyType]);
+		int randomNbCandyNb = RandomGenerator.generateRandomInt(maximumNbOfCandies) + 1;
+		int randomNbCandyType = RandomGenerator.generateRandomInt(typesOfCandies.length);
+		Candies candySurprise = new Candies(randomNbCandyNb, typesOfCandies[randomNbCandyType]);
 		return candySurprise;
 	}
-	
-	public Candies(int candyNb, String candyType) {
-		this.candyNb=candyNb;
-		this.candyType=candyType;
+
+	private Candies(int candyNb, String candyType) {
+		this.candyNb = candyNb;
+		this.candyType = candyType;
 	}
-	
+
 	@Override
 	public void enjoy() {
-		if(this.candyNb==1) {
+		if (this.candyNb == 1) {
 			System.out.println("Enjoy 1 delicious " + this.candyType + " candy!");
 		} else {
 			System.out.println("Enjoy " + this.candyNb + " delicious " + this.candyType + " candies!");
 		}
 	}
-	
+
 	@Override
 	public String toString() {
 		return "[Candies] number = " + this.candyNb + ", type = " + this.candyType;
 	}
 
+	@Override
+	public SurpriseTypes getSurpriseType() {
+		return SurpriseTypes.CANDIES;
+	}
 }
